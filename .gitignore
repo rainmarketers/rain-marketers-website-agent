@@ -1,0 +1,39 @@
+# Environment and credentials
+.env
+.env.local
+credentials.json
+api-keys.json
+oauth-token.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Node
+node_modules/
+.npm
+
+# Generated outputs
+/output/
+/reports/
+/screenshots/
+*.pdf
+*.xlsx
+
+# Cache
+.cache/
+.pytest_cache/
