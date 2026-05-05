@@ -1,34 +1,71 @@
-# Rain Marketers Website Agent
+# Rain Marketers Service Fulfillment Orchestrator
 
-A comprehensive AI-powered skill for creating strategic website briefs and content strategies for small business clients. Handles market research, competitive analysis, positioning strategy, and content planning.
+A complete AI-powered multi-skill orchestration system that coordinates 11 specialized agents across 4 service delivery phases: Discovery & Strategy → Website Creation → Paid Advertising → SEO/Organic.
 
 ## 🎯 What It Does
 
-The Website Post-Onboarding Agent helps Rain Marketers:
-- **Analyze client websites** to understand current positioning
-- **Research competitors** to identify market gaps
-- **Create strategic website briefs** with positioning, messaging, and structure recommendations
-- **Generate content templates** ready for copywriters to customize
-- **Design sitemaps** tailored to industry best practices
+The Service Fulfillment Orchestrator automates the complete Rain Marketers service delivery workflow:
+
+**Phase 1: Discovery & Strategy** (Weeks 1-2)
+- Market research, competitive analysis, positioning strategy
+- Customer interviews & audience validation
+- Website brief creation with messaging pillars
+
+**Phase 2: Website Creation** (Weeks 3-6)
+- Homepage, services, about, testimonials copywriting
+- Website design direction & user flows
+- SEO-optimized page structure
+
+**Phase 3: Paid Advertising** (Weeks 5-8, overlapping)
+- Google Ads keyword research & competitive analysis
+- Campaign strategy, offers, messaging angles
+- Landing page copy optimization
+- Campaign configuration ready to launch
+
+**Phase 4: SEO/Organic** (Weeks 6+, ongoing)
+- SEO keyword research & content gap analysis
+- 12-month content calendar planning
+- Monthly article creation & publishing (4-6/month)
+- Monthly performance reporting across all channels
+- Conversion rate optimization recommendations
 
 ---
 
 ## 🚀 Quick Start
 
-### Run the Agent
+### Run the Orchestrator
 
 ```bash
-/website-post-onboarding-agent "Client Name" "https://client-website.com"
+/rain-marketers-fulfillment-orchestrator
 ```
 
 ### What You Get
 
-✅ **Market Research** – Trends, competitor analysis, positioning gaps  
-✅ **Positioning Strategy** – Defensible positioning based on market data  
-✅ **Website Brief** – Executive summary, messaging pillars, CTAs, KPIs  
-✅ **Content Templates** – Homepage, services, FAQ, about us copy  
-✅ **Sitemap Recommendations** – Industry-appropriate page structure  
-✅ **Asana Tasks** – Automatically created and assigned  
+The orchestrator coordinates 11 specialized AI skills across 4 phases:
+
+**Phase 1: Discovery & Strategy** (4 skills)
+✅ **Onboarding Research** – Market landscape, competitive analysis, positioning validation  
+✅ **Website Brief** – Strategic direction, messaging pillars, success KPIs  
+
+**Phase 2: Website Creation**
+✅ **Website Copywriting** – All website pages (homepage, services, about, testimonials, FAQ)  
+
+**Phase 3: Paid Advertising** (3 skills)
+✅ **Google Ads Research** – Keyword opportunities, audience insights, competitor ad analysis  
+✅ **Ads Strategy** – Offer structure, messaging angles, audience segments, bidding  
+✅ **Campaign Preparation** – Campaign structure, ad groups, keywords, conversions tracking  
+
+**Phase 4: SEO/Organic** (3 skills, recurring monthly)
+✅ **SEO Research** – Keyword opportunities, topic clusters, content gaps  
+✅ **Content Planning** – 12-month content calendar (40-60 articles)  
+✅ **Content Creation** – Monthly article production (4-6 articles/month)  
+
+**Ongoing Optimization** (2 skills, recurring monthly)
+✅ **Monthly Reporting** – Performance across all channels  
+✅ **CRO Analysis** – Conversion optimization recommendations & A/B test roadmap  
+
+✅ **Approval Gates** – Human decision points at critical stages  
+✅ **Asana Integration** – Project created with phase-based task structure  
 
 ---
 
@@ -48,13 +85,25 @@ The Website Post-Onboarding Agent helps Rain Marketers:
 ```
 rain-marketing-website-agent/
 ├── skills/
-│   └── website-post-onboarding-agent/
-│       ├── SKILL.md
-│       └── references/                (7 reference docs)
-│
-├── agents/                            (future subagents)
-├── scripts/                           (future automation)
-├── templates/                         (future templates)
+│   ├── rain-marketers-fulfillment-orchestrator/     (Main orchestrator "brain")
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── fulfillment-workflow.md
+│   │       ├── integration-patterns.md
+│   │       ├── skill-taxonomy.md
+│   │       └── context-models.md
+│   │
+│   ├── onboarding-research-agent/                   (Phase 1.2)
+│   ├── website-copywriting-agent/                   (Phase 2.1)
+│   ├── google-ads-research-agent/                   (Phase 3.1)
+│   ├── google-ads-strategy-agent/                   (Phase 3.2a)
+│   ├── google-ads-landing-page-copywriter/          (Phase 3.2b)
+│   ├── google-ads-campaign-prep-agent/              (Phase 3.3)
+│   ├── seo-research-agent/                          (Phase 4.1)
+│   ├── seo-content-planner-agent/                   (Phase 4.2)
+│   ├── seo-content-creator-agent/                   (Phase 4.3, recurring)
+│   ├── monthly-reporting-agent/                     (Phase 4.4, recurring)
+│   └── cro-analysis-agent/                          (Phase 4.5, recurring)
 │
 ├── docs/
 │   ├── SETUP.md
@@ -71,59 +120,94 @@ See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for the complete structure.
 
 ---
 
-## 🔧 The Skill
+## 🧠 The Orchestrator System
 
-### `website-post-onboarding-agent`
+### `rain-marketers-fulfillment-orchestrator`
 
-**Location**: `skills/website-post-onboarding-agent/`
+**Location**: `skills/rain-marketers-fulfillment-orchestrator/`
 
-**Core Definition**: `SKILL.md`
+**Core Definition**: `SKILL.md` – Main orchestrator that routes work through 4 phases and coordinates approval gates
 
-**Reference Materials** (7 docs in `references/`):
-1. **example-website-brief.md** – Real example output (Clean Cut Gutters)
-2. **page-content-templates.md** – Copy templates for all page types
-3. **sitemap-builder.md** – Industry-specific website structures
-4. **onboarding-form-fields.md** – Client intake form
-5. **competitor-analysis.md** – How to analyze competitors
-6. **agent-prompt-guide.md** – How the agent operates
-7. **quality-standards.md** – Output quality checklist
+**Reference Architecture** (4 docs in `references/`):
+1. **fulfillment-workflow.md** – Complete 4-phase workflow with timeline, approval gates, success criteria
+2. **integration-patterns.md** – How skills communicate, context passing, error handling
+3. **skill-taxonomy.md** – Complete inventory of 11 core skills by phase/function
+4. **context-models.md** – 6 structured JSON data models for context flow between skills
+
+### 11 Specialized Skills
+
+| Phase | Skill | Days | Purpose |
+|-------|-------|------|---------|
+| 1.2 | onboarding-research-agent | 2-3 | Market research, competitor analysis, positioning validation |
+| 2.1 | website-copywriting-agent | 3-4 | All website page copy (homepage, services, about, testimonials, FAQ) |
+| 3.1 | google-ads-research-agent | 2-3 | Keyword research (50-100), audience insights, competitor ads analysis |
+| 3.2a | google-ads-strategy-agent | 2 | Offer structure, messaging angles, audience segments, bidding strategy |
+| 3.2b | google-ads-landing-page-copywriter | 1-2 | High-converting landing page copy with social proof & objection handling |
+| 3.3 | google-ads-campaign-prep-agent | 2.5 | Campaign structure, keywords by ad group, ad copy variants, conversion tracking |
+| 4.1 | seo-research-agent | 2 | Keyword opportunities (50-100), topic clusters (3-5), content gaps, quick wins |
+| 4.2 | seo-content-planner-agent | 2 | 12-month content calendar (40-60 articles), keyword assignment, internal linking |
+| 4.3 | seo-content-creator-agent | Monthly | Monthly content production (4-6 articles/month) with full optimization |
+| 4.4 | monthly-reporting-agent | Monthly | Performance aggregation across Ads, SEO, conversions, budget ROI |
+| 4.5 | cro-analysis-agent | Monthly | Conversion optimization analysis, A/B test roadmap, quick wins |
 
 ---
 
 ## 👥 For the Team
 
-### Client Onboarding Workflow
+### Complete Service Delivery Workflow
 
-1. **Collect Info** → Use [onboarding form](./skills/website-post-onboarding-agent/references/onboarding-form-fields.md)
-2. **Create Asana Project** → Name = client name (e.g., "Clean Cut Gutters")
-3. **Run Agent** → `/website-post-onboarding-agent "Client Name" "https://website.com"`
-4. **Review Output** → Check Asana tasks + brief
-5. **Handoff** → Pass to design/development team
+**Phase 1: Discovery & Strategy** (Weeks 1-2)
+1. **Collect info** from client (industry, goals, current state)
+2. **Run orchestrator** → `/rain-marketers-fulfillment-orchestrator`
+3. **Onboarding research** → Market analysis, positioning strategy
+4. **Approval Gate 1** → Client reviews & approves positioning
+5. **Website brief** → Strategic direction ready for all downstream work
 
-### Understanding the Output
+**Phase 2: Website Creation** (Weeks 3-6)
+6. **Website copywriting** → All pages (homepage, services, about, etc.)
+7. **Design & development** → Copy becomes website structure/pages
+8. **Approval Gate 2** → Client reviews website design
+9. **Publish website** → Live and optimized for SEO
 
-- **Website Brief** – What to say, how to structure, proof points
-- **Content Templates** – Ready-to-customize copy for each page
-- **Competitor Analysis** – Who's claiming what, where are gaps
-- **Success Metrics** – What "winning" looks like for this client
+**Phase 3: Paid Advertising** (Weeks 5-8, overlapping)
+10. **Google Ads research** → Keyword opportunities, audience insights
+11. **Campaign strategy** → Offer, messaging angles, audience segments
+12. **Landing page copywriting** → High-converting page optimized for ads
+13. **Campaign preparation** → Structure, keywords, ad copy, tracking
+14. **Approval Gate 3** → Client reviews campaign configuration
+15. **Launch campaign** → Ads live and tracking conversions
 
-See [docs/USAGE.md](./docs/USAGE.md) for detailed walkthrough.
+**Phase 4: SEO/Organic** (Weeks 6+, ongoing)
+16. **SEO research** → Keyword opportunities, content gaps, clusters
+17. **Content planning** → 12-month calendar with 40-60 article topics
+18. **Approval Gate 4** → Client reviews content plan
+19. **Monthly content creation** → 4-6 articles/month published & optimized
+20. **Monthly reporting** → Performance across all channels
+21. **CRO optimization** → Conversion rate improvements & A/B tests
+
+See [docs/USAGE.md](./docs/USAGE.md) for detailed walkthrough and [skills/rain-marketers-fulfillment-orchestrator/references/fulfillment-workflow.md](./skills/rain-marketers-fulfillment-orchestrator/references/fulfillment-workflow.md) for phase details.
 
 ---
 
-## 🧠 How It Works
+## 🏗️ How The Orchestrator Works
 
-The agent:
-1. Analyzes your client's current website
-2. Researches 5-7 direct competitors
-3. Maps their positioning claims
-4. Identifies defensible positioning gaps
-5. Develops 3 core messaging pillars
-6. Creates templates for all major pages
-7. Recommends site structure by industry
-8. Sets measurable KPIs
+The orchestrator is a **coordinating "brain"** that manages context flow between specialized skills:
 
-**All based on proven research methodology** stored in the reference docs.
+1. **Phase 1: Discovery** → Outputs positioning context (used by website + ads + SEO)
+2. **Phase 2: Website** → Outputs website brief context (messaging, structure, KPIs)
+3. **Phase 3: Ads** → Takes positioning + brief, outputs campaign ready to launch
+4. **Phase 4: SEO** → Takes positioning + brief, outputs 12-month content plan
+5. **Ongoing**: Monthly skills (content creation, reporting, CRO) process performance data
+
+**Key Features**:
+- **Context Passing** – JSON data flows between skills (no manual re-entry)
+- **Approval Gates** – Human decision points at critical stages block downstream work
+- **Parallel Execution** – Ads (Phase 3) runs alongside website (Phase 2)
+- **Recurring Cycles** – Monthly content, reporting, and optimization continue indefinitely
+- **Asana Integration** – Project auto-created with phase-based task structure
+- **Data Consistency** – Shared context prevents messaging conflicts
+
+**All based on proven service delivery methodology** documented in reference files.
 
 ---
 
@@ -133,26 +217,44 @@ See `examples/sample-client-brief/` for a complete real example (Clean Cut Gutte
 
 ---
 
-## 🔮 Future Growth
+## 🔮 Extending The System
 
-This repo is structured to scale. You can add:
+This orchestrator is built to scale. You can add new skills by:
 
-- **More Skills** – Copy the skill folder structure for new agents
-- **Subagents** – Define specialized agents in `agents/`
-- **Scripts** – Add automation in `scripts/`
-- **Templates** – Store reusable templates in `templates/`
+1. **Create new skill folder** under `skills/` with the standard structure:
+   - `SKILL.md` – Core definition (What it does, Input, Output, Execution stages)
+   - `references/` – Supporting documentation (optional)
 
-See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for how to extend.
+2. **Define the skill** following the established pattern:
+   - Input format (what context it receives)
+   - Output format (what context it produces)
+   - Execution stages (2-4 concrete stages)
+   - Success criteria (how to know it worked)
+   - Feeds into (which downstream skills use its output)
+
+3. **Update the orchestrator** to route to your new skill:
+   - Add to the appropriate phase
+   - Define input/output context flow
+   - Integrate with Asana task structure
+
+4. **Document relationships**:
+   - Skill taxonomy (in orchestrator references)
+   - Context models (in context-models.md)
+   - Integration patterns (in integration-patterns.md)
+
+See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for detailed extension guide and skill development standards.
 
 ---
 
 ## ❓ Questions?
 
-- **"How do I use this?"** → [docs/USAGE.md](./docs/USAGE.md)
-- **"How is it organized?"** → [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+- **"How do I run the complete workflow?"** → [docs/USAGE.md](./docs/USAGE.md)
+- **"How is it organized & how do I extend it?"** → [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)
 - **"What do I need to set up?"** → [docs/SETUP.md](./docs/SETUP.md)
-- **"What makes good output?"** → [Quality Standards](./skills/website-post-onboarding-agent/references/quality-standards.md)
-- **"How does it analyze competitors?"** → [Competitor Analysis](./skills/website-post-onboarding-agent/references/competitor-analysis.md)
+- **"How do skills coordinate?"** → [Integration Patterns](./skills/rain-marketers-fulfillment-orchestrator/references/integration-patterns.md)
+- **"What context flows between skills?"** → [Context Models](./skills/rain-marketers-fulfillment-orchestrator/references/context-models.md)
+- **"What's the complete workflow?"** → [Fulfillment Workflow](./skills/rain-marketers-fulfillment-orchestrator/references/fulfillment-workflow.md)
+- **"What are all the skills?"** → [Skill Taxonomy](./skills/rain-marketers-fulfillment-orchestrator/references/skill-taxonomy.md)
 
 ---
 
@@ -166,4 +268,4 @@ Built by Rain Marketers team. See [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 
 ---
 
-**Ready to create your first client brief?** Start with [docs/SETUP.md](./docs/SETUP.md)
+**Ready to run your first complete service delivery workflow?** Start with [docs/SETUP.md](./docs/SETUP.md)
